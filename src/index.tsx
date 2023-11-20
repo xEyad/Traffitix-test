@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 import router from "./Routes";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Header from "./components/Header/Header";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
@@ -14,6 +14,7 @@ root.render(
     <div id="App">
       <Sidebar />
       <div id="App-content">
+        <Header />
         <RouterProvider router={router} />
       </div>
     </div>

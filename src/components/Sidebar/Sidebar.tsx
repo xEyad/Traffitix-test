@@ -1,6 +1,5 @@
 import { FunctionComponent, useState } from "react";
 import styles from "./Sidebar.module.scss";
-import { useNavigate } from "react-router-dom";
 import router from "../../Routes";
 interface SidebarProps {}
 

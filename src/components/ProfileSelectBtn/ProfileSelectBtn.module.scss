@@ -1,0 +1,50 @@
+.theBtn {
+  display: flex;
+  padding: 6px;
+  align-items: center;
+  gap: 17px;
+  border-radius: 8px;
+  background: #fafafa;
+  width: 130px;
+}
+.profileImg {
+  position: relative;
+  div {
+    border-radius: 8px;
+    background-color: #9edade;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    z-index: 1;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  span:first-child {
+    color: #3c455d;
+    font-family: Roboto;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    opacity: 0.5;
+  }
+  span:nth-child(2) {
+    color: #3c455d;
+    font-family: Roboto;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}

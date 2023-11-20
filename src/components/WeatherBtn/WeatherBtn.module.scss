@@ -1,0 +1,15 @@
+.WeatherBtn {
+  display: flex;
+  font-family: Inter;
+  font-size: 13.75px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: black;
+  align-items: center;
+  margin-right: 22px;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}

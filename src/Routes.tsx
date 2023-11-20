@@ -5,17 +5,17 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import App from "./App";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
+import Map from "./pages/Map/Map";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Map />,
   },
   {
     path: "map",
-    element: <ComingSoon />,
+    element: <Map />,
   },
   {
     path: "dashboard",
