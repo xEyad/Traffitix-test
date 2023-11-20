@@ -30,11 +30,11 @@ const router = createBrowserRouter(
       element: <ComingSoon />,
     },
     {
-      path: `${basename}/control-panel`,
+      path: `control-panel`,
       element: <ComingSoon />,
     },
     {
-      path: `${basename}/search`,
+      path: `search`,
       element: <ComingSoon />,
     },
   ],
