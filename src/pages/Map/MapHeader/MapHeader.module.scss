@@ -1,7 +1,6 @@
 .MapHeader {
   display: flex;
   gap: 10px;
-  padding: 0 24px;
   align-items: center;
 }
 .search {
@@ -20,5 +19,6 @@
     line-height: 125%;
     color: #646e82;
     flex-grow: 1;
+    padding-left: 28px;
   }
 }

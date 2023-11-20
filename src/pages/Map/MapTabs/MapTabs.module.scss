@@ -1,0 +1,50 @@
+.mapTabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.tabs {
+  display: flex;
+  gap: 32px;
+  flex-grow: 1;
+}
+.tab {
+  cursor: pointer;
+  &:hover {
+    color: #a18c1591;
+  }
+}
+.heatBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  span {
+    color: var(--color-grey-70, #646e82);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+.incidentBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 6px;
+  div {
+    width: 15px;
+    height: 15px;
+    background-color: #25af36;
+    border-radius: 50%;
+  }
+  span {
+    color: var(--color-grey-70, #646e82);
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
