@@ -3,13 +3,20 @@ import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import router from "./Routes";
+import Sidebar from "./components/Sidebar/Sidebar";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <div id="App">
+      <Sidebar />
+      <div id="App-content">
+        <RouterProvider router={router} />
+      </div>
+    </div>
   </React.StrictMode>
 );
 

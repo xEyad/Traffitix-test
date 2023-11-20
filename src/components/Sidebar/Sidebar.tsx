@@ -1,20 +1,27 @@
 import { FunctionComponent, useState } from "react";
 import styles from "./Sidebar.module.scss";
+import { useNavigate } from "react-router-dom";
+import router from "../../Routes";
 interface SidebarProps {}
 
 const Sidebar: FunctionComponent<SidebarProps> = () => {
   const tabs = [
-    { label: "Dashboard", icon: "/assets/dashboard.svg", url: "" },
-    { label: "Alerts", icon: "/assets/alert.svg", url: "" },
-    { label: "Map", icon: "/assets/map.svg", url: "" },
-    { label: "Search/Watchlist", icon: "/assets/search.svg", url: "" },
-    { label: "Analytics", icon: "/assets/analytics.svg", url: "" },
-    { label: "Control Panel ", icon: "/assets/control-panel.svg", url: "" },
+    { label: "Dashboard", icon: "/assets/dashboard.svg", url: "/dashboard" },
+    { label: "Alerts", icon: "/assets/alert.svg", url: "/alerts" },
+    { label: "Map", icon: "/assets/map.svg", url: "/map" },
+    { label: "Search/Watchlist", icon: "/assets/search.svg", url: "/search" },
+    { label: "Analytics", icon: "/assets/analytics.svg", url: "/analytics" },
+    {
+      label: "Control Panel ",
+      icon: "/assets/control-panel.svg",
+      url: "/control-panel",
+    },
   ];
 
   const [activeTab, setactiveTab] = useState(2);
   const onTabClick = (idx: number) => {
     setactiveTab(idx);
+    router.navigate(tabs[idx].url);
   };
   return (
     <div className={styles.sidebar}>
