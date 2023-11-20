@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Traffitix-test/static/css/main.68ebd158.css",
-    "main.js": "/Traffitix-test/static/js/main.6cf77d9b.js",
+    "main.js": "/Traffitix-test/static/js/main.1c42350d.js",
     "static/js/787.10e68eb2.chunk.js": "/Traffitix-test/static/js/787.10e68eb2.chunk.js",
     "index.html": "/Traffitix-test/index.html",
     "main.68ebd158.css.map": "/Traffitix-test/static/css/main.68ebd158.css.map",
-    "main.6cf77d9b.js.map": "/Traffitix-test/static/js/main.6cf77d9b.js.map",
+    "main.1c42350d.js.map": "/Traffitix-test/static/js/main.1c42350d.js.map",
     "787.10e68eb2.chunk.js.map": "/Traffitix-test/static/js/787.10e68eb2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.68ebd158.css",
-    "static/js/main.6cf77d9b.js"
+    "static/js/main.1c42350d.js"
   ]
 }
