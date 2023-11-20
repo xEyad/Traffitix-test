@@ -1,42 +1,46 @@
-import { createRoot } from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import ComingSoon from "./pages/ComingSoon/ComingSoon";
 import Map from "./pages/Map/Map";
-
-const router = createBrowserRouter([
+//@ts-ignore
+const basename = window.__BASENAME__;
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Map />,
+    },
+    {
+      path: basename,
+      element: <Map />,
+    },
+    {
+      path: `map`,
+      element: <Map />,
+    },
+    {
+      path: `dashboard`,
+      element: <ComingSoon />,
+    },
+    {
+      path: `alerts`,
+      element: <ComingSoon />,
+    },
+    {
+      path: `analytics`,
+      element: <ComingSoon />,
+    },
+    {
+      path: `${basename}/control-panel`,
+      element: <ComingSoon />,
+    },
+    {
+      path: `${basename}/search`,
+      element: <ComingSoon />,
+    },
+  ],
   {
-    path: "/",
-    element: <Map />,
-  },
-  {
-    path: "map",
-    element: <Map />,
-  },
-  {
-    path: "dashboard",
-    element: <ComingSoon />,
-  },
-  {
-    path: "alerts",
-    element: <ComingSoon />,
-  },
-  {
-    path: "analytics",
-    element: <ComingSoon />,
-  },
-  {
-    path: "control-panel",
-    element: <ComingSoon />,
-  },
-  {
-    path: "search",
-    element: <ComingSoon />,
-  },
-]);
+    basename: basename,
+  }
+);
 
 export default router;

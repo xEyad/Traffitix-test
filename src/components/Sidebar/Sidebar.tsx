@@ -1,18 +1,31 @@
 import { FunctionComponent, useState } from "react";
 import styles from "./Sidebar.module.scss";
 import router from "../../Routes";
+import { PUBLIC_URL } from "../../utils";
 interface SidebarProps {}
 
 const Sidebar: FunctionComponent<SidebarProps> = () => {
   const tabs = [
-    { label: "Dashboard", icon: "/assets/dashboard.svg", url: "/dashboard" },
-    { label: "Alerts", icon: "/assets/alert.svg", url: "/alerts" },
-    { label: "Map", icon: "/assets/map.svg", url: "/map" },
-    { label: "Search/Watchlist", icon: "/assets/search.svg", url: "/search" },
-    { label: "Analytics", icon: "/assets/analytics.svg", url: "/analytics" },
+    {
+      label: "Dashboard",
+      icon: `${PUBLIC_URL}/assets/dashboard.svg`,
+      url: "/dashboard",
+    },
+    { label: "Alerts", icon: `${PUBLIC_URL}/assets/alert.svg`, url: "/alerts" },
+    { label: "Map", icon: `${PUBLIC_URL}/assets/map.svg`, url: "/map" },
+    {
+      label: "Search/Watchlist",
+      icon: `${PUBLIC_URL}/assets/search.svg`,
+      url: "/search",
+    },
+    {
+      label: "Analytics",
+      icon: `${PUBLIC_URL}/assets/analytics.svg`,
+      url: "/analytics",
+    },
     {
       label: "Control Panel ",
-      icon: "/assets/control-panel.svg",
+      icon: `${PUBLIC_URL}/assets/control-panel.svg`,
       url: "/control-panel",
     },
   ];
@@ -24,7 +37,7 @@ const Sidebar: FunctionComponent<SidebarProps> = () => {
   };
   return (
     <div className={styles.sidebar}>
-      <img src="/assets/logo.svg" className={styles.logo} />
+      <img src={`${PUBLIC_URL}/assets/logo.svg`} className={styles.logo} />
       {tabs.map((tab, idx) => (
         <div
           className={styles.tab}

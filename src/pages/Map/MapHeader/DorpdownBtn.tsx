@@ -1,4 +1,5 @@
 import { FunctionComponent, useState } from "react";
+import { PUBLIC_URL } from "../../../utils";
 interface DropdownBtnProps {
   label: string;
 }
@@ -29,7 +30,7 @@ const DropdownBtn: FunctionComponent<DropdownBtnProps> = (props) => {
       >
         {props.label}
       </span>
-      <img src="assets/menu-icon.svg" alt="" />
+      <img src={`${PUBLIC_URL}/assets/menu-icon.svg`} alt="" />
     </div>
   );
 };

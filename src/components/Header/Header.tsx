@@ -3,6 +3,7 @@ import styles from "./Header.module.scss";
 import ProfileSelectBtn from "../ProfileSelectBtn/ProfileSelectBtn";
 import IconButton from "../IconButton/IconButton";
 import WeatherBtn from "../WeatherBtn/WeatherBtn";
+import { PUBLIC_URL } from "../../utils";
 interface HeaderProps {}
 
 const Header: FunctionComponent<HeaderProps> = () => {
@@ -10,10 +11,10 @@ const Header: FunctionComponent<HeaderProps> = () => {
     <div className={styles.header}>
       <WeatherBtn />
       <IconButton>
-        <img src="assets/notification.svg" alt="" />
+        <img src={`${PUBLIC_URL}/assets/notification.svg`} alt="" />
       </IconButton>
       <IconButton>
-        <img src="assets/settings.svg" alt="" />
+        <img src={`${PUBLIC_URL}/assets/settings.svg`} alt="" />
       </IconButton>
       <ProfileSelectBtn />
     </div>

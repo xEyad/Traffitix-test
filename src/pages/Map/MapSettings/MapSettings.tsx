@@ -1,5 +1,6 @@
 import { FunctionComponent, useState } from "react";
 import styles from "./MapSettings.module.scss";
+import { PUBLIC_URL } from "../../../utils";
 interface MapSettingsProps {
   className?: string;
 }
@@ -10,7 +11,7 @@ const MapSettings: FunctionComponent<MapSettingsProps> = (props) => {
   return (
     <div className={`${props.className} ${styles.mapSettings}`}>
       <div className={styles.title}>
-        <img src="assets/layers.svg" alt="" />
+        <img src={`${PUBLIC_URL}/assets/layers.svg`} alt="" />
         <span>Map settings</span>
       </div>
       {options.map((option, idx) => (
@@ -26,7 +27,7 @@ const MapSettings: FunctionComponent<MapSettingsProps> = (props) => {
             ></div>
           </div>
           <span>{option}</span>
-          <img src="assets/layers.svg" alt="" />
+          <img src={`${PUBLIC_URL}/assets/layers.svg`} alt="" />
         </div>
       ))}
     </div>

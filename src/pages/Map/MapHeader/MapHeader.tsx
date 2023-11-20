@@ -1,6 +1,7 @@
 import { FunctionComponent, useState } from "react";
 import styles from "./MapHeader.module.scss";
 import DropdownBtn from "./DorpdownBtn";
+import { PUBLIC_URL } from "../../../utils";
 interface MapHeaderProps {}
 
 const MapHeader: FunctionComponent<MapHeaderProps> = () => {
@@ -8,7 +9,7 @@ const MapHeader: FunctionComponent<MapHeaderProps> = () => {
     <div className={styles.MapHeader}>
       <div className={styles.search}>
         <input type="text" placeholder="Search" />
-        <img src="assets/filter.svg" alt="" />
+        <img src={`${PUBLIC_URL}/assets/filter.svg`} alt="" />
       </div>
       <DropdownBtn label="Date" />
       <DropdownBtn label="Status" />
