@@ -1,5 +1,4 @@
 .header {
-  flex-grow: 1;
   display: flex;
   justify-content: end;
   height: 44px;
@@ -7,4 +6,5 @@
   align-items: center;
   gap: 12px;
   border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 16px;
 }

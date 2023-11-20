@@ -1,0 +1,24 @@
+.MapHeader {
+  display: flex;
+  gap: 10px;
+  padding: 0 24px;
+  align-items: center;
+}
+.search {
+  display: flex;
+  gap: 8px;
+  flex-grow: 1;
+  input {
+    border-radius: 8px;
+    border: 1px solid var(--Border, #e5e7eb);
+    background: #fff;
+    padding: 8px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    color: #646e82;
+    flex-grow: 1;
+  }
+}
