@@ -1,9 +1,11 @@
 import { FunctionComponent, useState } from "react";
 import styles from "./MapTabs.module.scss";
 import Switch from "react-switch";
-interface MapTabsProps {}
+interface MapTabsProps {
+  onTabChange?: (tab: number) => void;
+}
 
-const MapTabs: FunctionComponent<MapTabsProps> = () => {
+const MapTabs: FunctionComponent<MapTabsProps> = (props) => {
   const tabs = [{ label: "Tab1" }, { label: "Tab2" }, { label: "Tab3" }];
   const [isHeatMapOn, setisHeatMapOn] = useState(false);
   const [activeTab, setactiveTab] = useState(1);
@@ -12,6 +14,7 @@ const MapTabs: FunctionComponent<MapTabsProps> = () => {
   };
   const onTabSelected = (idx: number) => {
     setactiveTab(idx);
+    if (props.onTabChange) props.onTabChange(idx);
   };
   return (
     <div className={styles.mapTabs}>
