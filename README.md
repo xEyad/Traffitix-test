@@ -1,7 +1,5 @@
 # TODO
 
-alerts submenu
-
 ## Deployment
 
 run "npm run deploy"
