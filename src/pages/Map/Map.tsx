@@ -4,10 +4,21 @@ import MapTabs from "./MapTabs/MapTabs";
 import styles from "./Map.module.scss";
 import MapSettings from "./MapSettings/MapSettings";
 import ComingSoon from "../ComingSoon/ComingSoon";
+import { getRandomInt } from "../../utils";
 interface MapProps {}
 
 const Map: FunctionComponent<MapProps> = () => {
   const [activeTab, setactiveTab] = useState(1);
+  const generateCongestions = () => {
+    let congestions = [];
+    for (let i = 0; i < getRandomInt(1, 7); i++) {
+      let left = getRandomInt(320, 820);
+      let top = getRandomInt(120, 420);
+      congestions.push([left, top]);
+    }
+    return congestions;
+  };
+  const congestions = generateCongestions();
   return (
     <div className={styles.mapPage}>
       <MapHeader />
@@ -18,6 +29,15 @@ const Map: FunctionComponent<MapProps> = () => {
         ) : (
           <>
             <MapSettings className={styles.mapSettings} />
+            {congestions.map((c) => (
+              <div
+                style={{
+                  left: `${c[0]}px`,
+                  top: `${c[1]}px`,
+                }}
+                className={styles.pulsatingCircle}
+              ></div>
+            ))}
             <iframe
               width="100%"
               height="100%"
