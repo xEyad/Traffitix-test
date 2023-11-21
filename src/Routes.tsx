@@ -3,14 +3,11 @@ import ComingSoon from "./pages/ComingSoon/ComingSoon";
 import Map from "./pages/Map/Map";
 //@ts-ignore
 const basename = window.__BASENAME__;
+console.log("basename", basename);
 const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: <Map />,
-    },
-    {
-      path: basename,
       element: <Map />,
     },
     {
@@ -39,7 +36,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: basename,
+    basename: process.env.PUBLIC_URL,
   }
 );
 
