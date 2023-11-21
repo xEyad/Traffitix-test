@@ -6,6 +6,7 @@ const IconButton: FunctionComponent<IconButtonProps & PropsWithChildren> = (
 ) => {
   return (
     <div
+      title="Repo Github"
       style={{
         display: "flex",
         padding: "6px",
@@ -18,7 +19,13 @@ const IconButton: FunctionComponent<IconButtonProps & PropsWithChildren> = (
         cursor: "pointer",
       }}
     >
-      {props.children}
+      <a
+        href="https://github.com/xEyad/Traffitix-test"
+        target="_blank"
+        style={{ color: "inherit", textDecoration: "unset" }}
+      >
+        {props.children}
+      </a>
     </div>
   );
 };

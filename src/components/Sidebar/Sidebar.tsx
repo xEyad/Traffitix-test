@@ -11,7 +11,12 @@ const Sidebar: FunctionComponent<SidebarProps> = () => {
       icon: `${PUBLIC_URL}/assets/dashboard.svg`,
       url: "/dashboard",
     },
-    { label: "Alerts", icon: `${PUBLIC_URL}/assets/alert.svg`, url: "/alerts" },
+    {
+      label: "Alerts",
+      icon: `${PUBLIC_URL}/assets/alert.svg`,
+      url: "/alerts",
+      sub: [{ label: "Crashes" }, { label: "Accidents" }],
+    },
     { label: "Map", icon: `${PUBLIC_URL}/assets/map.svg`, url: "/map" },
     {
       label: "Search/Watchlist",
@@ -60,11 +65,21 @@ const Sidebar: FunctionComponent<SidebarProps> = () => {
           {}
           <span
             style={{
+              flexGrow: 1,
+              textAlign: "left",
               color: activeTab == idx ? "#F2AB19" : "white",
             }}
           >
             {tab.label}
           </span>
+          <img
+            style={{
+              color: "white",
+              visibility: tab.sub ? "visible" : "hidden",
+            }}
+            src={`${PUBLIC_URL}/assets/menu-icon.svg`}
+            alt=""
+          />
         </div>
       ))}
     </div>
